@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>One Plus</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Mukta Malar|Shadows Into Light " rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Mukta Malar, sans-serif;
+      line-height: 1.8;
+      color: white;
+	  background-color: #4C6D46;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: ;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 20px;
+      line-height: 1.375em;
+      color: black
+	  ;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #efb404;
+      color: white;
+      padding: 100px 25px;
+      font-family: Shadows Into Light, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f44242;
+  }
+  .logo-small {
+      color: pink;
+      font-size: 50px;
+  }
+  .logo {
+      color: blue;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+	  color: black;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: blue;
+  }
+  .panel-heading {
+      color: blue !important;
+      background-color: grey !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: blue;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #243a7c;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #243a7c;
+      z-index: 9999;
+      border: 10;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Shadows Into Light, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">One Plus</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">CAMERA</a></li>
+        <li><a href="#services">WHAT'S IN THE BOX</a></li>
+        <li><a href="#portfolio">FEATURES</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>One Plus</h1> 
+  <p>A New View</p> 
+  <form>
+    <div class="input-group">
+      <div class="input-group-btn">
+      </div>
+    </div>
+  </form>
+</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Shoot Clearer Photos</h2><br>
+      <h4>Dual Camera.</h4><br>
+      <p>Optimized for low-light and potrait photography. Our highly rated 16 + 20 MP cameras help you capture crystal-clear shots.</p>
+      <br><button class="btn btn-default btn-lg button1">Learn More</button>
+	  
+    </div>
+    <div class="col-sm-4">
+      <img src= "https://www.gogi.in/wp-content/uploads/2017/06/oneplus-5-rear-sample-side_Bokeh.jpg" width="400px" >
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="https://boygeniusreport.files.wordpress.com/2018/02/oneplus-5t-red.jpg?quality=98&strip=all&w=1200" width="400px">
+    </div>
+    <div class="col-sm-8">
+      <h2>Design</h2><br>
+      <h4> Expand your perspective..</h4><br>
+      <p> Leap into a truly immersive flagship experience. Our Full Optic AMOLED 18:9 display complements the masterfully crafted all-aluminium body for a sleek, yet resilient design.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  </div>
+<div class="container text-center">
+  <h3>What's in the Box?'</h3>
+  <p><em>You deserve the best!</em></p>
+  <p></p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>One Plus 5T</strong></p><br>
+      <img src="https://imei24.com/img/oneplus/18_44_05_201711280174801j95nq01.jpg"  width="250px" alt="Random Name">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Dash Charger</strong></p><br>
+      <img src="https://gloimg.gbtcdn.com/gb/pdm-product-pic/Electronic/2017/09/08/goods-img/1504811766736365887.jpg" width="250px" alt="Random Name">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Transparent Cover</strong></p><br>
+      <img src="https://www.geekmaxi.com/img/p/5/1/9/1/5191-thickbox_default.jpg" width=" 250px" alt="Random Name">
+    </div>
+  </div>
+</div>ß
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>One Plus 5T</h2><br>
+  <h4>Packed with Incredible Power Packed Performace</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://4.img-dpreview.com/files/p/TS600x450~sample_galleries/4311077055/1912952760.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Shot On One Plus</strong></p>
+        <p> The Dual Camera</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://forums.oneplus.net/attachments/oxygenos-4-7-6-jpg.657071/" alt="New York" width="3+00" height="300">
+        <p><strong>OxygenOs</strong></p>
+        <p>The best of Android refined.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://ae01.alicdn.com/kf/HTB1LSSDdL6H8KJjy0Fjq6yXepXag/Original-ONEPLUS-5t-Dash-Charger-One-plus-5-3t-3-Smartphone-Usb-adapter-5V-4A-Liteon.jpg" alt="San Francisco" width="300" height="300">
+        <p><strong>Dash Charge</strong></p>
+        <p>Probably the best charging solution on the planet.</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>Reviews</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"One Plus 5T: premium full-screen experience at half-cost of iPhone X"<br><span>the gurdian</span></h4>
+      </div>
+      <div class="item">
+        <h4>"The One Plus 5T is not only a bargain - it's the best Android phone you can buy at any price"<br><span>Business Insider</span></h4>
+      </div>
+      <div class="item">
+        <h4>"The One Plus 5T is a wonderful update to an already premium affordable handset"<br><span>Android Authority</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>A New View to The World is here.</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>One Plus 5T</h1>
+        </div>
+        <div class="panel-body">
+          
+        </div>
+        <div class="panel-footer">
+          <h3>$559</h3>
+          <h4>8gb RAM 128gb ROM</h4>
+          <button class="btn btn-lg button2 ">Buy Now</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>One Plus 5</h1>
+        </div>
+        <div class="panel-body">
+        </div>
+        <div class="panel-footer">
+          <h3>$449</h3>
+          <h4>6gb RAM 64gb ROM</h4>
+          <button class="btn btn-lg button2">Buy Now</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Dash Charger</h1>
+        </div>
+        <div class="panel-body">
+        </div>
+        <div class="panel-footer">
+          <h3>$59</h3>
+          <h4>The fastest Charging method</h4>
+          <button class="btn btn-lg button2">Buy Now</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Our Customer service operative are active 24/7  to answer your questions.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> United States</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +1 (858)609-6590</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> OnePlus@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+<form action="http://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this);" target="_top">
+<input name="skip_WhereToSend" type="hidden" value="your@email.com" />
+<input name="skip_SnapHostID" type="hidden" value="SANE7EK2BM9P" />
+<input name="skip_WhereToReturn" type="hidden" value="http://www.YourWebsiteAddress.com/ThankYouPage.htm" />
+<input name="skip_Subject" type="hidden" value="Contact Us Form" />
+<input name="skip_ShowUsersIp" type="hidden" value="1" />
+<input name="skip_SendCopyToUser" type="hidden" value="1" />
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") {alert('Name is required.');frm.Name.focus();return false;}
+if (frm.FromEmailAddress.value == "") {alert('Email address is required.');frm.FromEmailAddress.focus();return false;}
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress.focus();return false;}
+if (frm.Comments.value == "") {alert('Please enter comments or questions.');frm.Comments.focus();return false;}
+if (frm.skip_CaptchaCode.value == "") {alert('Enter web form code.');frm.skip_CaptchaCode.focus();return false;}
+return true; }
+function ReloadCaptchaImage(captchaImageId) {
+var obj = document.getElementById(captchaImageId);
+var src = '' + obj.src;
+obj.src = '';
+var date = new Date();
+var pos = src.indexOf('&rad=');
+if (pos >= 0) { src = src.substr(0, pos); }
+obj.src = src + '&rad=' + date.getTime();
+return false; }
+</script>
+<table border="0" cellpadding="5" cellspacing="0" width="600">
+<tr>
+<td><b>Name:</b></td>
+<td><input name="Name" type="text" maxlength="60" style="width:350px;" /></td>
+</tr><tr>
+<td><b>Phone number:</b></td>
+<td><input name="PhoneNumber" type="text" maxlength="43" style="width:350px;" /></td>
+</tr><tr>
+<td><b>Email address:</b></td>
+<td><input name="FromEmailAddress" type="text" maxlength="60" style="width:350px;" /></td>
+</tr><tr>
+<td><b>Comments and questions:</b></td>
+<td><textarea name="Comments" rows="7" cols="40" style="width:350px;"></textarea></td>
+</tr><tr>
+<td colspan="2" align="center"> <br />
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" style="padding-bottom:18px;">
+<!-- Please check our ProCaptcha service which is ad-free:
+http://www.SnapHost.com/captcha/ProCaptchaOverview.aspx -->
+<a href="http://www.snaphost.com/captcha" alt="script email form" title="script email form">
+script email form</a></td></tr>
+<tr valign="top"><td> <i>Enter web form code:</i>
+<input name="skip_CaptchaCode" type="text" style="width:80px;" maxlength="6" />
+</td><td>
+<a href="http://www.snaphost.com/captcha/ReadyForms/ContactUsForm.aspx"><img id="CaptchaImage" alt="Contact Us form" title="HTML code for Contact Us form"
+style="margin-left:20px;"
+src="http://www.SnapHost.com/captcha/CaptchaImage.aspx?id=SANE7EK2BM9P&ImgType=2" /></a><br />
+<a href="#" onclick="return ReloadCaptchaImage('CaptchaImage');"><span style="font-size:12px;">reload image</span></a> </td></tr>
+</table> <br />
+* - required fields. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<input name="skip_Submit" type="submit" value="Submit" />
+</td></tr>
+</table><br />
+</form>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(36.7783,-119.4179);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs9AS4Vg6lNFPACOvX5Ye6qK7sD7wHbgc&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+<script>
+	$(".button1").on("click", function() {
+		alert("-Shoot smooth 4K Videos");
+	});
+	$(".button2").on("click", function() {
+		alert("PAYMENT METHOD");
+	});
+	$(".button3").on("click", function() {
+		alert(" MESSAGE SENT");
+	});
+</script>
+
+</body>
+</html>
